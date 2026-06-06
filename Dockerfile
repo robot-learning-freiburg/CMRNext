@@ -31,7 +31,7 @@ RUN apt-get update && apt-get install -y \
 RUN pip3 install --upgrade pip setuptools wheel
 RUN pip3 install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
 RUN pip3 install typing-extensions==4.0.1
-# Разделяем установку, чтобы использовать кэш Docker при сбоях сети
+# Split the installation to use Docker cache during network failures
 RUN pip3 install --timeout=1000 --retries=5 numpy==1.20.3 scikit-image pyquaternion tqdm python-dateutil==2.8.2 pillow==8.4.0 mathutils==2.81.2
 RUN pip3 install --timeout=1000 --retries=5 open3d
 
