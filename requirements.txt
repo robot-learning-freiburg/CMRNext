@@ -20,7 +20,7 @@ loguru
 open3d
 rich
 # For argoverse:
-omegaconf==2.1.0
+omegaconf==2.1.2
 colour
 descartes
 h5py
